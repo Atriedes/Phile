@@ -48,13 +48,40 @@ In order `openlitespeed` work with `PHP` we must compile `PHP` using `LSAPI`. Th
 Select `PHP` version from dropdown list, I prefer compile latest PHP version. You may compile PHP version your own parameter but in this tutorial I will use paramater that I use for my production server. Here is my parameter
 
 ~~~
-'--with-litespeed' '--with-libdir=lib64' '--enable-cli' '--with-mcrypt' '--enable-mbstring' '--with-openssl' '--with-mysql' '--with-mysqli' '--with-mysql-sock=/var/lib/mysql/mysql.sock' '--with-pdo-mysql' '--with-gd' '--with-zlib' '--with-gmp' '--with-sqlite' '--enable-pdo' '--enable-gd-native-ttf' '--enable-fileinfo' '--disable-debug' '--with-pic' '--with-bz2' '--with-curl' '--with-curlwrappers' '--without-gdbm' '--with-gettext' '--with-iconv' '--with-pspell' '--with-pcre-regex' '--enable-exif' '--enable-ftp' '--enable-magic-quotes' '--enable-sockets' '--disable-sysvsem' '--disable-sysvshm' '--disable-sysvmsg' '--enable-wddx' '--with-kerberos' '--enable-ucd-snmp-hack' '--enable-shmop' '--enable-calendar' '--enable-gd-jis-conv' '--enable-dom' '--disable-dba' '--enable-xmlreader' '--enable-xmlwriter' '--with-tidy' '--enable-xml' '--with-xmlrpc' '--with-xsl' '--enable-bcmath' '--enable-soap' '--enable-zip' '--enable-inline-optimization' '--with-mhash' '--enable-mbregex' '--with-freetype-dir=lib64' '--with-jpeg-dir=lib64' '--with-png-dir=lib64'
+'--with-litespeed' '--with-libdir=lib64' '--enable-cli'
+'--with-mcrypt' '--enable-mbstring' '--with-openssl' '--with-mysql'
+'--with-mysqli' '--with-mysql-sock=/var/lib/mysql/mysql.sock'
+'--with-pdo-mysql' '--with-gd' '--with-zlib' '--with-gmp'
+'--with-sqlite' '--enable-pdo' '--enable-gd-native-ttf'
+'--enable-fileinfo' '--disable-debug' '--with-pic' '--with-bz2'
+'--with-curl' '--with-curlwrappers' '--without-gdbm'
+'--with-gettext' '--with-iconv' '--with-pspell' '--with-pcre-regex'
+'--enable-exif' '--enable-ftp' '--enable-magic-quotes' '--enable-sockets'
+'--disable-sysvsem' '--disable-sysvshm'
+'--disable-sysvmsg' '--enable-wddx' '--with-kerberos'
+'--enable-ucd-snmp-hack' '--enable-shmop' 
+'--enable-calendar' '--enable-gd-jis-conv' '--enable-dom'
+'--disable-dba' '--enable-xmlreader' '--enable-xmlwriter'
+'--with-tidy' '--enable-xml' '--with-xmlrpc' '--with-xsl'
+'--enable-bcmath' '--enable-soap' '--enable-zip'
+'--enable-inline-optimization' '--with-mhash' '--enable-mbregex'
+'--with-freetype-dir=lib64' '--with-jpeg-dir=lib64'
+'--with-png-dir=lib64'
 ~~~
 
 Becore you compile `PHP` you have to satisfied `PHP` dependency by installing some libs
 
 ~~~
-sudo apt-get install mcrypt libc6-dev gcc-multilib make manpages-dev automake1.9 libtool flex bison gdb gcc-doc libstdc++6-4.6-dev g++-4.6 libstdc++6 libstdc++6-4.6-doc g++ libxml2-dev libcurl4-gnutls-dev libpng12-dev libjpeg8-dev libxpm-dev libreadline-dev libmcrypt-dev zlibc libexif-dev libgmp-dev libxslt1-dev autoconf imagemagick libgif-dev ttf-freefont libfreetype6-dev libiconv-hook-dev libmagickcore3-extra ghostscript netpbm libicu44 libicu-dev libevent-dev libevent-2.0-5 t1lib-bin libvpx-dev libt1-dev libpspell-dev libtidy-dev
+sudo apt-get install mysql-server mysql-client mcrypt \
+libc6-dev gcc-multilib make manpages-dev \
+automake1.9 libtool flex bison gdb gcc-doc libstdc++6-4.6-dev \
+g++-4.6 libstdc++6 libstdc++6-4.6-doc g++ libxml2-dev \
+libcurl4-gnutls-dev libpng12-dev libjpeg8-dev libxpm-dev \
+libreadline-dev libmcrypt-dev zlibc libexif-dev libgmp-dev \
+libxslt1-dev autoconf imagemagick libgif-dev ttf-freefont \
+libfreetype6-dev libiconv-hook-dev libmagickcore3-extra \
+netpbm libicu44 libicu-dev libevent-dev libevent-2.0-5 t1lib-bin \
+libvpx-dev libt1-dev libpspell-dev libtidy-dev
 ~~~
 
 After finished installing `PHP` dependency you may continue you `PHP` compilation process.
