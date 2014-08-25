@@ -104,7 +104,7 @@ class Page {
 				$type = null;
 			}
 			$term = explode(':', $term[0]);
-			$sorting[] = array('type' => $type, 'key' => $term[0], 'order' => $term[1]);
+			$sorting[] = array('type' => $type, 'key' => $term[0], 'order' => $term[0]);
 		}
 
 		// prepare search criteria for array_multisort
